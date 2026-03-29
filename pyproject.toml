@@ -1,0 +1,24 @@
+[project]
+name = "my-first-mlops-project"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Hajer5503",email = "Hajer.Abdelkefi@esprit.tn"}
+]
+requires-python = ">=3.14"
+dependencies = [
+    "pandas (>=3.0.1,<4.0.0)",
+    "scikit-learn (>=1.8.0,<2.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[dependency-groups]
+dev = [
+    "pytest (>=9.0.2,<10.0.0)",
+    "black (>=26.3.1,<27.0.0)",
+    "flake8 (>=7.3.0,<8.0.0)"
+]
