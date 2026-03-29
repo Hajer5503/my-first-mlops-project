@@ -36,3 +36,13 @@ def test_model_accuracy_above_threshold():
     predictions = model.predict(X)
     accuracy = (predictions == y).mean()
     assert accuracy > 0.8
+
+def test_load_data_correct_columns():
+    X, y = load_data()
+    expected_columns = [
+        "sepal length (cm)",
+        "sepal width (cm)",
+        "petal length (cm)",
+        "petal width (cm)",
+    ]
+    assert list(X.columns) == expected_columns
