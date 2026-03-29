@@ -7,6 +7,8 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 
+RANDOM_STATE = 42
+TEST_SIZE = 0.2
 
 def load_data():
     iris = load_iris()
@@ -17,9 +19,8 @@ def load_data():
 
 def train_model(X, y):
     X_train, X_test, y_train, y_test = train_test_split(
-        X, y, test_size=0.2, random_state=42
-    )
-    model = RandomForestClassifier(n_estimators=100, random_state=42)
+    X, y, test_size=TEST_SIZE, random_state=RANDOM_STATE)
+    model = RandomForestClassifier(n_estimators=100, random_state=RANDOM_STATE)
     model.fit(X_train, y_train)
     predictions = model.predict(X_test)
     acc = accuracy_score(y_test, predictions)
