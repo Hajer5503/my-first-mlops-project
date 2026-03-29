@@ -1,3 +1,6 @@
+import logging
+logging.basicConfig(level=logging.INFO)
+
 import pandas as pd
 from sklearn.datasets import load_iris
 from sklearn.ensemble import RandomForestClassifier
@@ -20,7 +23,7 @@ def train_model(X, y):
     model.fit(X_train, y_train)
     predictions = model.predict(X_test)
     acc = accuracy_score(y_test, predictions)
-    print(f"Accuracy: {acc:.2f}")
+    logging.info(f"Accuracy: {acc:.2f}")
     return model
 
 
