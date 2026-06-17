@@ -1,6 +1,5 @@
 Write-Host "Running tests..."
 poetry run pytest tests/ -v
-
 if ($LASTEXITCODE -eq 0) {
     Write-Host "All tests passed!" -ForegroundColor Green
 } else {
