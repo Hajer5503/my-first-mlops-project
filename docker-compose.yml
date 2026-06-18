@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  ml-model:
+    build: .
+    container_name: ml-training
+    volumes:
+      - ./results:/app/results
+
+  database:
+    image: postgres:15
+    container_name: ml-database
+    environment:
+      POSTGRES_USER: mlops
+      POSTGRES_PASSWORD: mlops123
+      POSTGRES_DB: mlops_db
+    ports:
+      - "5432:5432"
