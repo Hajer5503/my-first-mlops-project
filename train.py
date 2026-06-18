@@ -7,6 +7,9 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 
+import json
+import os
+
 RANDOM_STATE = 42
 TEST_SIZE = 0.2
 
@@ -27,9 +30,18 @@ def train_model(X, y):
     predictions = model.predict(X_test)
     acc = accuracy_score(y_test, predictions)
     logging.info(f"Accuracy: {acc:.2f}")
+    
+    os.makedirs("results", exist_ok=True)
+    with open("results/metrics.json", "w") as f:
+        json.dump({"accuracy": round(float(acc), 2)}, f)
+    logging.info("Metrics saved to results/metrics.json")
+
     return model
 
 
 if __name__ == "__main__":
     X, y = load_data()
     model = train_model(X, y)
+
+
+
