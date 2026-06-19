@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/MLOps%20Career/my-first-mlops-project/mlruns/0/24129abef26a4109a3d5349bf4fe8611/artifacts
+end_time: 1781888331864
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 24129abef26a4109a3d5349bf4fe8611
+run_name: powerful-ox-500
+run_uuid: 24129abef26a4109a3d5349bf4fe8611
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1781888328565
+status: 3
+tags: []
+user_id: hajer
