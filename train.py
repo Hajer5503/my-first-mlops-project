@@ -1,15 +1,14 @@
+import json
 import logging
-
-logging.basicConfig(level=logging.INFO)
+import os
 
 import pandas as pd
 from sklearn.datasets import load_iris
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
+from sklearn.model_selection import train_test_split
 
-import json
-import os
+logging.basicConfig(level=logging.INFO)
 
 RANDOM_STATE = 42
 TEST_SIZE = 0.2
