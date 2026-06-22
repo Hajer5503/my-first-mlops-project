@@ -5,3 +5,5 @@ __pycache__/
 .flake8
 dist/
 *.egg-info/
+mlruns/
+mlflow.db
