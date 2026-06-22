@@ -47,7 +47,9 @@ def train_model(X, y, n_estimators=100, max_depth=None):
         mlflow.log_metric("accuracy", acc)
         mlflow.sklearn.log_model(model, "model")
 
-        logging.info(f"n_estimators={n_estimators}, max_depth={max_depth} -> Accuracy: {acc:.2f}")
+        logging.info(
+            f"n_estimators={n_estimators}, max_depth={max_depth} -> Accuracy: {acc:.2f}"
+        )
 
         os.makedirs("results", exist_ok=True)
         with open("results/metrics.json", "w") as f:
