@@ -6,12 +6,10 @@ import pandas as pd
 from sklearn.datasets import load_iris
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
-<<<<<<< Updated upstream
 from sklearn.model_selection import train_test_split
-=======
+
 import mlflow
 import mlflow.sklearn
->>>>>>> Stashed changes
 
 logging.basicConfig(level=logging.INFO)
 
@@ -34,9 +32,7 @@ def train_model(X, y):
     )
 
     with mlflow.start_run():
-        model = RandomForestClassifier(
-            n_estimators=100, random_state=RANDOM_STATE
-        )
+        model = RandomForestClassifier(n_estimators=100, random_state=RANDOM_STATE)
         model.fit(X_train, y_train)
         predictions = model.predict(X_test)
         acc = accuracy_score(y_test, predictions)
