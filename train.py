@@ -19,11 +19,10 @@ TEST_SIZE = 0.2
 
 def load_data():
     """Load and return the Iris dataset as a DataFrame."""
-    iris = load_iris()
-    X = pd.DataFrame(iris.data, columns=iris.feature_names)
-    y = iris.target
+    df = pd.read_csv("data/iris.csv")
+    X = df.drop("target", axis=1)
+    y = df["target"]
     return X, y
-
 
 def train_model(X, y, n_estimators=100, max_depth=None):
     """Train a Random Forest classifier and return the model."""
