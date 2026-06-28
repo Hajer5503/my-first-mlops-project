@@ -18,11 +18,7 @@ jobs:
         run: |
           pip install --upgrade pip
           pip install -r requirements.txt
-          pip install pytest black flake8
-      - name: Install DVC
-        run: pip install dvc
-      - name: Pull data with DVC
-        run: dvc pull
+          pip install pytest black flake
       - name: Run Black formatter check
         run: black --check .
       - name: Run Flake8 linter
