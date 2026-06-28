@@ -24,6 +24,7 @@ def load_data():
     y = df["target"]
     return X, y
 
+
 def train_model(X, y, n_estimators=100, max_depth=None):
     """Train a Random Forest classifier and return the model."""
     X_train, X_test, y_train, y_test = train_test_split(
