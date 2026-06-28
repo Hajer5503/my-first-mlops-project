@@ -1,0 +1,4 @@
+2026-06-28 17:44:09,014 - INFO - Prediction made | Time: 2026-06-28T16:44:09.014853 | Input: sepal_length=6.2, sepal_width=8.3, petal_length=2.5, petal_width=0.5 | Prediction: setosa (class 0)
+2026-06-28 17:44:33,052 - INFO - Prediction made | Time: 2026-06-28T16:44:33.052059 | Input: sepal_length=7.5, sepal_width=5.2, petal_length=4.7, petal_width=0.8 | Prediction: versicolor (class 1)
+2026-06-28 17:45:01,764 - INFO - Prediction made | Time: 2026-06-28T16:45:01.764007 | Input: sepal_length=4.8, sepal_width=6.7, petal_length=1.9, petal_width=0.2 | Prediction: setosa (class 0)
+2026-06-28 17:45:26,200 - INFO - Prediction made | Time: 2026-06-28T16:45:26.200764 | Input: sepal_length=9.2, sepal_width=2.8, petal_length=6.2, petal_width=0.4 | Prediction: virginica (class 2)
