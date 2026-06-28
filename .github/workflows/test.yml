@@ -1,5 +1,3 @@
-name: Run Tests
-
 "on":
   push:
     branches: [ main, feature/* ]
@@ -9,31 +7,25 @@ name: Run Tests
 jobs:
   test:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.11'
-
       - name: Install dependencies
         run: |
           pip install --upgrade pip
           pip install -r requirements.txt
           pip install pytest black flake8
-          - name: Install DVC
+      - name: Install DVC
         run: pip install dvc
       - name: Pull data with DVC
         run: dvc pull
-
       - name: Run Black formatter check
         run: black --check .
-
       - name: Run Flake8 linter
         run: flake8 .
-
       - name: Run tests
         run: pytest tests/ -v
