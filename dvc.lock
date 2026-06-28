@@ -1,0 +1,35 @@
+schema: '2.0'
+stages:
+  prepare:
+    cmd: poetry run python save_dataset.py
+    deps:
+    - path: save_dataset.py
+      hash: md5
+      md5: 2dd4dbd349f17ff45188a704cdcf3116
+      size: 268
+    outs:
+    - path: data/iris.csv
+      hash: md5
+      md5: 21d441a28bce4417276097df955afc50
+      size: 2928
+  train:
+    cmd: poetry run python train.py
+    deps:
+    - path: data/iris.csv
+      hash: md5
+      md5: 21d441a28bce4417276097df955afc50
+      size: 2928
+    - path: train.py
+      hash: md5
+      md5: c3fd9324ba06db2e3596cce73e149c43
+      size: 2067
+    outs:
+    - path: mlruns
+      hash: md5
+      md5: 08486eba7b9e6277bef15253949ce7b2.dir
+      size: 1104627
+      nfiles: 65
+    - path: results/metrics.json
+      hash: md5
+      md5: 9a0379eaa11dd7b9e9995a62a5f21656
+      size: 17

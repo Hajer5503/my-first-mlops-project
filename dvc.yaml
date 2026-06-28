@@ -1,0 +1,18 @@
+stages:
+  prepare:
+    cmd: poetry run python save_dataset.py
+    deps:
+      - save_dataset.py
+    outs:
+      - data/iris.csv
+
+  train:
+    cmd: poetry run python train.py
+    deps:
+      - train.py
+      - data/iris.csv
+    outs:
+      - mlruns
+    metrics:
+      - results/metrics.json:
+          cache: false

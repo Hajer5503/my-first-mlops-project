@@ -7,3 +7,4 @@ dist/
 *.egg-info/
 mlruns/
 mlflow.db
+/mlruns
