@@ -1,0 +1,19 @@
+# Iris Dataset Guide
+
+## Setosa
+The setosa iris has small flowers with short petals. The sepal length ranges from 4.3 to 5.8 cm, sepal width from 2.3 to 4.4 cm, petal length from 1.0 to 1.9 cm, and petal width from 0.1 to 0.6 cm. It blooms in spring and is native to eastern North America.
+
+## Versicolor
+The versicolor iris has medium-sized flowers. The sepal length ranges from 4.9 to 7.0 cm, sepal width from 2.0 to 3.4 cm, petal length from 3.0 to 5.1 cm, and petal width from 1.0 to 1.8 cm. It is commonly found in wetlands.
+
+## Virginica
+The virginica iris has large flowers with long petals. The sepal length ranges from 4.9 to 7.9 cm, sepal width from 2.2 to 3.8 cm, petal length from 4.5 to 6.9 cm, and petal width from 1.4 to 2.5 cm. It is the tallest iris species.
+
+## Measurements
+All iris measurements are in centimeters. The four features measured are:
+1. Sepal length
+2. Sepal width
+3. Petal length
+4. Petal width
+
+These measurements are used to classify which iris species a flower belongs to.
