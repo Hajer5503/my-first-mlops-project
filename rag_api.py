@@ -6,6 +6,9 @@ from langchain_community.document_loaders import TextLoader
 from langchain_text_splitters import CharacterTextSplitter
 from pathlib import Path
 import logging
+from dotenv import load_dotenv
+
+load_dotenv()  # Load .env file
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
