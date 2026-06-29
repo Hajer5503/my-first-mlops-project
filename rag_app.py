@@ -26,10 +26,10 @@ retriever = vectorstore.as_retriever()
 # Test RAG
 if __name__ == "__main__":
     queries = [
-    "What are the measurements of a virginica iris?",
-    "Which iris species has the largest petal length?",
-    "What is the petal width range for versicolor?"
-]
+        "What are the measurements of a virginica iris?",
+        "Which iris species has the largest petal length?",
+        "What is the petal width range for versicolor?",
+    ]
 
 for query in queries:
     docs = retriever.invoke(query)
@@ -38,4 +38,3 @@ for query in queries:
     result = llm.invoke(prompt)
     print(f"Query: {query}")
     print(f"Answer: {result}\n")
-    

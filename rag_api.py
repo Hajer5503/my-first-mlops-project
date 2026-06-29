@@ -29,31 +29,34 @@ llm = OllamaLLM(model="mistral")
 # FastAPI app
 app = FastAPI(title="Iris RAG Chatbot", version="1.0")
 
+
 class Query(BaseModel):
     question: str
+
 
 @app.get("/health")
 def health():
     return {"status": "healthy"}
+
 
 @app.post("/ask")
 def ask(query: Query):
     """Ask the RAG system about iris flowers."""
     docs = retriever.invoke(query.question)
     context = "\n".join([doc.page_content for doc in docs])
-    
-    prompt = f"Based on this context: {context}\n\nQuestion: {query.question}\n\nAnswer:"
+
+    prompt = (
+        f"Based on this context: {context}\n\nQuestion: {query.question}\n\nAnswer:"
+    )
     answer = llm.invoke(prompt)
-    
+
     logger.info(f"Question: {query.question}")
     logger.info(f"Answer: {answer}")
-    
-    return {
-        "question": query.question,
-        "answer": answer,
-        "source_documents": len(docs)
-    }
+
+    return {"question": query.question, "answer": answer, "source_documents": len(docs)}
+
 
 if __name__ == "__main__":
     import uvicorn
+
     uvicorn.run(app, host="0.0.0.0", port=8001)
