@@ -325,7 +325,16 @@ After completing this project, you'll understand:
 ✅ **LLM Orchestration** (LangChain, RAG, embeddings)  
 ✅ **LLM Observability** (LangSmith tracing, debugging)  
 ✅ **CI/CD Automation** (GitHub Actions, automated testing)  
-✅ **Containerization** (Docker, multi-service composition)  
+✅ **Containerization** (Docker, multi-service composition) 
+
+## Quick Links
+
+- 📖 **[Contributing Guide](CONTRIBUTING.md)** — How to extend this project
+- 🎬 **[Demo Script](DEMO.md)** — Quick start examples
+- 🔗 **[GitHub Repo](https://github.com/Hajer5503/my-first-mlops-project)** — Full source code
+- 📊 **[LinkedIn](https://linkedin.com/in/hajer-abdelkefi-ab31452ab)** — My professional profile
+
+---
 
 ---
 
