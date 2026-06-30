@@ -1,5 +1,12 @@
 # My First MLOps Project
 
+[![Python 3.11](https://img.shields.io/badge/Python-3.11-blue.svg)](https://www.python.org/downloads/release/python-3110/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.138.0-green.svg)](https://fastapi.tiangolo.com/)
+[![MLflow](https://img.shields.io/badge/MLflow-2.22.5-orange.svg)](https://mlflow.org/)
+[![LangChain](https://img.shields.io/badge/LangChain-Latest-purple.svg)](https://langchain.com/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+A complete **end-to-end MLOps pipeline**...
 A complete **end-to-end MLOps pipeline** covering model training, deployment, monitoring, and LLM integration.
 
 Built as a structured learning progression through 4 phases of MLOps mastery.
@@ -191,6 +198,15 @@ curl -X POST http://localhost:8001/ask \
 | **Containerization** | Docker | Latest |
 | **CI/CD** | GitHub Actions | Latest |
 
+| Layer | Technology | Badge |
+|-------|-----------|-------|
+| **Language** | Python 3.11 | ![Python](https://img.shields.io/badge/Python-3.11-blue) |
+| **Package Mgmt** | Poetry | ![Poetry](https://img.shields.io/badge/Poetry-Latest-blue) |
+| **ML Training** | scikit-learn | ![scikit-learn](https://img.shields.io/badge/scikit--learn-Latest-orange) |
+| **API** | FastAPI | ![FastAPI](https://img.shields.io/badge/FastAPI-0.138.0-green) |
+| **LLM** | LangChain | ![LangChain](https://img.shields.io/badge/LangChain-Latest-purple) |
+| **Observability** | LangSmith | ![LangSmith](https://img.shields.io/badge/LangSmith-Cloud-blueviolet) |
+| **CI/CD** | GitHub Actions | ![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-Latest-blue) |
 ---
 
 ## Project Structure
