@@ -221,7 +221,8 @@ my-first-mlops-project/
 ├── tests/
 │   └── test_train.py         # Unit tests
 └── .gitignore                # Git exclusions
----
+```
+
 
 ## Key Lessons Learned
 
