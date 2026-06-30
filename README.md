@@ -194,6 +194,8 @@ curl -X POST http://localhost:8001/ask \
 ---
 
 ## Project Structure
+```
+
 my-first-mlops-project/
 ├── app.py                    # Phase 2: Prediction API
 ├── rag_api.py                # Phase 3: RAG chatbot API
